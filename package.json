@@ -1,0 +1,29 @@
+{
+  "name": "bot-topup",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot Top-up Game & PPOB with AtlanticH2H and Qiospay - Production Ready for Termux",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "check": "node --check index.js",
+    "prod": "nohup node index.js > logs/bot.log 2>&1 &",
+    "stop": "pkill -f 'node index.js'",
+    "logs": "tail -f logs/bot.log",
+    "db:init": "node scripts/init-db.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "axios": "^1.7.0",
+    "better-sqlite3": "^9.0.0",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "pino": "^9.0.0",
+    "pino-pretty": "^11.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "node-pre-gyp": "^0.13.0"
+  }
+}
